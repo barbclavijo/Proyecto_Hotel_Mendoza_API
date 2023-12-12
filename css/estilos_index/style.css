@@ -1,0 +1,306 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #DBC493;
+
+}
+
+.contenedor {
+    margin: 0px;
+    padding: 0px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33383b;
+    color:#2F2516;
+    margin: 0px;
+    padding: 0px;
+}
+
+.encabezado h1 {
+    font-size: 35px;
+    color: #DED1BF;
+    font-family: 'EB Garamond', serif;
+    
+}
+
+.encabezado img {
+    width: 200px;
+    margin: 0px 15px;
+
+}
+
+.logo img {
+        width: 100px;
+    
+    }
+
+.encabezado-centro  {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+   
+
+}
+
+
+
+.encabezado-ppal h2 {
+    display: flex;
+    font-size: 20px;
+    height: 70px;
+    border: 1px solid #B69E83;
+    margin: 0;
+    justify-content: center;
+    align-items: end;
+    background-color: #B69E83;
+    font-family: 'EB Garamond', serif;  
+    color: #33383b;
+    padding-bottom: 10px;
+}
+
+
+    
+    /*-------------------------------------------*/
+/* Estilos del menu */
+
+.api {
+    margin: 15px;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+.menu {
+    background-color: #33383b;
+    display: flex;
+    height: 60px;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    padding: auto;
+    font-family: 'EB Garamond', serif;
+    
+}
+
+nav ul li:hover {
+    background-color: grey;
+    
+}
+
+nav ul li a {
+    color: #DED1BF;
+    padding: 20px;
+    font-size: 18px;
+    text-decoration: none;
+   
+   
+}
+
+nav ul li a:hover {
+    color: #242323;
+    background-color: #DBC493;
+    transform: scale(5.5);
+
+
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+}
+
+.barra {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+/*-------------------------------------------*/
+/* Estilos de las habitaciones */
+
+.contenedor-hab {
+    display: flex;
+    padding: 10px;
+    height: 300px;
+    overflow: hidden;
+    font-family: 'EB Garamond', serif;
+   
+}
+
+.contenedor-hab div {
+    margin: 10px;
+}
+.contenedor-hab img {
+    height: 250px
+}
+.contenedor-hab li {
+    list-style: none;
+}
+.contenedor-hab li a {
+    color: #2F2516;
+    padding: 10px;
+    text-decoration: none;
+
+}
+
+/* footer  */
+
+
+.contenedorLogoFooter img {
+    width: 100px;
+
+}
+
+.footerGeneral {
+    display: flex;
+    background: #242323;
+    padding: 30px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footerMenu {
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footerMenu a {
+    text-decoration: none;
+    color: #DED1BF;
+    font-family: 'EB Garamond', serif;
+}
+
+.footerMenu a:before {
+    content: "|";
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.informacion i {
+    display: flex;
+    color: white;
+    font-size: 25px;
+
+}
+
+.informacion p {
+    display: flex;
+    color: #DED1BF;
+    padding: 10px 10px 10px;
+    font-family: 'EB Garamond', serif;
+
+
+}
+
+.direccion {
+
+    display: flex;
+    align-items: center;
+
+
+
+
+}
+
+.telefono {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+}
+
+
+
+.email {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+
+}
+
+
+.informacion p a {
+    color: #DBC493;
+    text-decoration: none;
+
+}
+
+
+.derechos {
+    width: 20%;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    margin: 0;
+    padding: 5px;
+    font-family: 'EB Garamond', serif;
+}
+
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.socialMedia a {
+    width: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 5px;
+    margin-top: 10px;
+}

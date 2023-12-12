@@ -1,0 +1,571 @@
+a {
+  text-decoration: none;
+}
+
+
+body {
+
+  margin: 0px;
+  padding: 0px;
+  background-color: #DBC493;
+
+}
+
+.header {
+  display: flex;
+  padding: 30px;
+  background-color: #242323;
+  justify-content: center;
+  padding-bottom: 10px;
+
+}
+
+
+.contenedorLogo img {
+  width: 100px;
+  margin: 0px 15px;
+
+}
+
+.menu {
+  background-color: #242323;
+  display: flex;
+  height: 60px;
+
+}
+
+
+nav ul li {
+  display: inline-block;
+  padding: auto;
+
+}
+
+nav ul li:hover {
+  background-color: grey;
+
+}
+
+nav ul li a {
+  color: #DED1BF;
+  padding: 20px;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #242323;
+  background-color: #DBC493;
+  transform: scale(5.5);
+
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  text-decoration: none;
+
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+}
+
+.barra {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.encabezado-centro h2 {
+  display: flex;
+  font-size: 20px;
+  height: 70px;
+  border: 1px solid #B69E83;
+  margin: 0;
+  justify-content: center;
+  align-items: end;
+  background-color: #B69E83;
+  font-family: 'EB Garamond', serif;
+  color: #33383b;
+  padding-bottom: 10px;
+}
+
+.encabezado-centro p {
+  text-align: center;
+  font-size: 20px;
+
+}
+
+
+
+/* info principal */
+
+.info_serv p {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  line-height: 30px;
+  font-size: 18px;
+  font-family: 'EB Garamond', serif;
+}
+
+.info_serv .api {
+  margin: 15px;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+}
+
+
+/* formulario */
+
+.formulario h3 {
+  text-align: center;
+  margin: 10px 0;
+  margin-bottom: 20px;
+  font-family: 'EB Garamond', serif;
+}
+
+
+.formulario {
+  box-sizing: border-box;
+  background-color: #DED1BF;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 90%;
+  height: 100%;
+
+
+}
+
+.formulario .form_general .form_label {
+  display: block;
+  padding: 10px;
+  width: 30%;
+  object-fit: cover;
+  font-family: 'EB Garamond', serif;
+}
+
+.finput:focus {
+  border: 3px solid #242323;
+  outline: none;
+}
+
+.form_input {
+  position: relative;
+  width: 90%;
+  height: 30px;
+  justify-content: left;
+  align-items: center;
+
+}
+
+
+.date {
+  width: 100%;
+  border: 3px solid transparent;
+  flex-direction: column;
+
+}
+
+.formulario .form_general {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px 10px;
+  padding: 0;
+  align-items: center;
+
+
+}
+
+
+#bot {
+  width: 80px;
+  height: 30px;
+  border-radius: 3px solid #DED1BF;
+  justify-content: center;
+  font-family: 'EB Garamond', serif;
+
+}
+
+
+.sec {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  margin: 15px 15px 50px 15px;
+
+
+}
+
+.datos {
+  display: block;
+  width: 50%;
+
+}
+
+.datos .datostexto {
+
+  display: flex;
+  margin: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  align-items: baseline;
+  font-family: 'EB Garamond', serif;
+
+}
+
+
+.datostexto i,
+p,
+h3 {
+  margin: 4px 4px;
+  justify-content: flex-end;
+
+}
+
+
+/* footer */
+
+
+.contenedorLogoFooter img {
+  width: 100px;
+
+}
+
+.footerGeneral {
+  display: flex;
+  background: #242323;
+  padding: 30px;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.footerMenu {
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footerMenu a {
+  text-decoration: none;
+  color: #DED1BF;
+  font-family: 'EB Garamond', serif;
+}
+
+.footerMenu a:before {
+  content: "|";
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+}
+
+.informacion i {
+  display: flex;
+  color: white;
+  font-size: 25px;
+
+}
+
+.informacion p {
+  display: flex;
+  color: #DED1BF;
+  padding: 5px 5px 5px;
+  font-family: 'EB Garamond', serif;
+;
+
+}
+
+.direccion {
+
+  display: flex;
+  align-items: center;
+
+
+
+
+}
+
+.telefono {
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+
+}
+
+
+
+.email {
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+
+
+}
+
+
+.informacion p a {
+  color: #DBC493;
+  text-decoration: none;
+
+}
+
+
+.derechos {
+  width: 20%;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  margin: 0;
+  padding: 5px;
+  font-family: 'EB Garamond', serif;
+}
+
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.socialMedia a {
+  width: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .principal {
+
+    display: grid;
+    grid-template: auto auto auto / 100%;
+    grid-template-areas: "header"
+      "centro"
+      "footer"
+
+  }
+
+  .header {
+    flex-direction: column;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  .barra,
+  .menu,
+  .lista {
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  .sec {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .datostexto {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .principal {
+
+    display: grid;
+    grid-template: auto auto auto / 100%;
+    grid-template-areas: "header"
+      "centro"
+      "footer"
+
+  }
+
+  .header {
+    flex-direction: column;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  .barra,
+  .menu,
+  .lista {
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+
+  .sec {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .datostexto {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+  .footerGeneral {
+    display: flex;
+    background: #242323;
+    padding: 30px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .contenedorLogoFooter {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerGeneral {
+    display: flex;
+    background: #242323;
+    max-width: 100%;
+
+  }
+
+
+  .footerMenu a {
+    text-decoration: none;
+    color: #DED1BF;
+  }
+
+  .footerMenu a:before {
+    content: "|";
+    font-size: 20px;
+    padding-right: 5px;
+  }
+
+  .informacion {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .informacion i {
+    display: flex;
+    color: white;
+    font-size: 25px;
+
+
+  }
+
+  .informacion p {
+    display: flex;
+    color: #DED1BF;
+    padding: 3px 3px 3px;
+
+
+
+  }
+
+  .direccion {
+
+    display: flex;
+    align-items: center;
+  }
+
+  .telefono {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+  }
+
+  .email {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+  }
+
+  .informacion p a {
+    color: #DBC493;
+    text-decoration: none;
+
+  }
+
+  .derechos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    margin: 0;
+
+  }
+
+
+  .socialMedia {
+    display: flex;
+    justify-content: space-between;
+
+  }
+}

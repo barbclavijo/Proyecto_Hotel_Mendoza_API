@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Gestion de Reservas</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilos_excursiones/style.css">
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8efb435a74.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="navGestion">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" >
+        <div class="contenedorLogo">
+            <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+        </div>
+        <a class="navbar-brand mr-5 font-weight-bold" href="gestion.html" id="navLink">
+            Gestion de Reservas
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" id="navLink">
+                        Home
+                        <span class="sr-only">
+                            (current)
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="altas.html" id="navLink">
+                        Nueva Reserva                      
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        data-toggle="dropdown" href="#" id="navbarDropdown" role="button" >
+                        Gestione su reserva
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item" href="consulta.html">
+                            Consultar
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            Modificar
+                        </a>
+                        <a class="dropdown-item" href="baja.html">
+                            Cancelar
+                        </a>
+                        <div class="dropdown-divider">
+                        </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input aria-label="Search" class="form-control mr-sm-2" placeholder="ingrese código de reserva"
+                    type="search">
+                <button class="btn border btn-group my-2 mx-lg-3 my-sm-0" type="submit" id="buscar">
+                    Buscar
+                </button>
+                </input>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<div id="modReserva">
+    <form @submit.prevent="obtenerReserva" id="obtReserva">
+        <label for="id_reserva" id="formMargin" class="formMargin">ID Reserva:</label>
+        <input type="text" v-model="id_reserva" required id="formMargin" class="formMargin"><br>
+        <button type="submit" id="modBot" class="formMargin">Modificar Reserva</button> 
+        <a href="gestion.html" id="formStyle" class="formMargin"> Volver </a>
+    </form>
+
+    <div v-if="mostrarReserva" class="form-check-inline p-5">
+        <form @submit.prevent="guardarCambios" class="col mb-3"  enctype="multipart/form-data">      
+            <label class="col-form-label-sm" for="id_reserva">ID Reserva</label>
+            <input type="text" id="id_reserva" name="id_reserva"  v-model="id_reserva" required><br>
+
+            <label class="col-form-label-sm" for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" v-model="nombre" required><br>
+
+            <label class="col-form-label-sm" for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"  v-model="apellido" required><br>
+
+            <label class="col-form-label-sm" for="mail">Email</label>
+            <input type="email" id="mail" name="mail" v-model="mail" required><br>
+
+            <label class="col-form-label-sm" for="fecha_ing">Checkin:</label>
+            <input type="date" id="fecha_ing" name="fecha_ing"  v-model="fecha_ing" required>
+
+            <label class="col-form-label-sm" for="fecha_egr">Checkout:</label>
+            <input type="date" id="fecha_egr" name="fecha_egr" v-model="fecha_egr" required><br>
+
+            <label class="col-form-label-sm" for="habitación">Habitación</label>
+            <select name="habitacion" id="habitacion"  v-model="habitacion" required>
+                <option value="seleccion">Seleccionar </option>></option>
+                <option value="individual">Individual </option>></option>
+                <option value="doble">Doble</option>></option>
+                <option value="triple">Triple</option>></option>
+            </select>
+
+            <label for="cantidad">N° Huéspedes:</label>
+            <input type="number" id="cantidad" name="cantidad" v-model="cantidad" required><br>
+
+            <button class="btn border btn-group my-2 mx-lg-3 my-sm-0" type="submit">Modificar Reserva</button><br>
+            <a href="gestion.html">Cancelar</a>
+
+        </form>     
+    </div>
+</div>
+<div class="footerGestion">
+    <footer class="footerGeneral">
+
+        <div class="footerLogoLink">
+
+            <div class="contenedorLogoFooter">
+                <img src="imagenes/logo.png" alt="">
+            </div>
+
+            <p class="footerMenu">
+                <a href="index.html">Home</a>
+
+                <a href="habitaciones.html">Habitaciones</a>
+
+                <a href="servicios.html">Servicios</a>
+
+                <a href="formulario.html">Contacto</a>
+
+            </p>
+
+
+        </div>
+
+        <div class="informacion">
+
+            <div class="direccion">
+                <i class="fa fa-map-marker"></i>
+                <p>Av. Champagnat 32<br> Mendoza.</p>
+            </div>
+
+            <div class="telefono">
+                <i class="fa fa-phone"></i>
+                <p>0261-541-8139</p>
+            </div>
+
+            <div class="email">
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@hotelam.com">info@hotelam.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="derechos">
+
+            <p class="copyright">
+                &copy; 2023 comisión 23511 Codo a Codo <br>Hotel de Alta Montaña Mendoza.
+
+            </p>
+
+            <div class="socialMedia">
+
+                <a href="https://www.facebook.com/"><span class="fab fa-facebook"></span></a>
+                <a href="https://twitter.com/?lang=es"><span class="fab fa-twitter"></span></a>
+                <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</div>
+</div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        //const URL = "http://127.0.0.1:5000/"
+        const URL = "https://barbclavijo.pythonanywhere.com/"
+        const app = Vue.createApp({
+            data() {
+                return {
+                    id_reserva: '',
+                    nombre: '',
+                    apellido: '',
+                    mail: '',
+                    fecha_ing: '',
+                    fecha_egr: '',
+                    habitacion: '',
+                    cantidad: '',
+                    mostrarReserva: false,
+                };
+            },
+            methods: {
+                obtenerReserva() {
+                    console.log(URL + 'reservas/' + this.id_reserva)
+                    fetch(URL + 'reservas/' + this.id_reserva)
+                        .then(response => response.json())
+                        .then(data => {
+                            this.id_reserva = data.id_reserva;
+                            this.nombre = data.nombre;
+                            this.apellido = data.apellido;
+                            this.mail = data.mail;
+                            this.fecha_ing =  data.fecha_ing;
+                            this.fecha_egr = data.fecha_egr;
+                            this.habitacion = data.habitacion;
+                            this.cantidad = data.cantidad;
+                            this.mostrarReserva = true;
+                        })
+                        .catch(error => console.error('Error:', error));
+                },
+
+                guardarCambios() {
+                    const formData = new FormData();
+                    formData.append('id_reserva', this.id_reserva);
+                    formData.append('nombre', this.nombre);
+                    formData.append('apellido', this.apellido);
+                    formData.append('mail', this.mail);
+                    formData.append('fecha_ing', this.fecha_ing);
+                    formData.append('fecha_egr', this.fecha_egr);
+                    formData.append('habitacion', this.habitacion);
+                    formData.append('cantidad', this.cantidad);
+
+                    fetch(URL + 'reservas/' + this.id_reserva, {
+                        method: 'PUT',
+                        body: formData,
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert('Reserva actualizada');
+                            this.limpiarFormulario();
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('Error no se puedo actualizar la Reserva');
+                        });
+                },
+                
+                limpiarFormulario() {
+                    this.id_reserva = '';
+                    this.nombre = '';
+                    this.apellido = '';
+                    this.mail = '';
+                    this.fecha_ing = '';
+                    this.fecha_egr = '';
+                    this.habitacion = '';
+                    this.cantidad = '';
+                    this.mostrarReserva = false;
+                }
+            }
+        });
+
+        app.mount('#modReserva');
+    </script>
+
+    <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+        </script>
+    <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+        </script>
+    <script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+
+</body>
+
+</html>

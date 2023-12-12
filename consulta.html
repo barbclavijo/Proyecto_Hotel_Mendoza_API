@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Gestion de Reservas</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilos_excursiones/style.css">
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8efb435a74.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="navGestion">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="contenedorLogo">
+            <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+        </div>
+        <a class="navbar-brand mr-5 font-weight-bold" href="gestion.html" id="navLink">
+            Gestion de Reservas
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon">
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" id="navLink">
+                        Home
+                        <span class="sr-only">
+                        (current)
+                        </span> 
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="altas.html" id="navLink">
+                        Nueva Reserva
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                        data-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+                        Gestione su reserva
+                    </a>
+                    <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                            Consultar
+                        </a>
+                        <a class="dropdown-item" href="modificaciones.html">
+                            Modificar
+                        </a>
+                        <a class="dropdown-item" href="baja.html">
+                            Cancelar
+                        </a>
+                        <div class="dropdown-divider">
+                        </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input aria-label="Search" class="form-control mr-sm-2" placeholder="ingrese código de reserva"
+                    type="search">
+                <button class="btn border btn-group my-2 mx-lg-3 my-sm-0" type="submit" id="buscar">
+                    Buscar
+                </button>
+                </input>
+            </form>
+        </div>
+    </nav>
+</div>
+    <div class="tabla">
+    <table class="table table-striped table-bordered m-3 p-5"> <!---no puedo ponerle el margen derecho-->
+        <thead>
+            <tr>
+                <th>ID Reserva</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Checkin</th>
+                <th>Checkout</th> 
+                <th>Habitación</th>
+                <th>N° Huéspedes</th>
+            </tr>
+        </thead>
+        <tbody id="tablaReservas"> </tbody>
+    </table>
+</div>
+
+<div class="footerGestion">
+    <footer class="footerGeneral">
+
+        <div class="footerLogoLink">
+
+            <div class="contenedorLogoFooter">
+                <img src="imagenes/logo.png" alt="">
+            </div>
+
+            <p class="footerMenu">
+                <a href="index.html">Home</a>
+
+                <a href="habitaciones.html">Habitaciones</a>
+
+                <a href="servicios.html">Servicios</a>
+
+                <a href="formulario.html">Contacto</a>
+
+            </p>
+
+
+        </div>
+
+        <div class="informacion">
+
+            <div class="direccion">
+                <i class="fa fa-map-marker"></i>
+                <p>Av. Champagnat 32<br> Mendoza.</p>
+            </div>
+
+            <div class="telefono">
+                <i class="fa fa-phone"></i>
+                <p>0261-541-8139</p>
+            </div>
+
+            <div class="email">
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:info@hotelam.com">info@hotelam.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="derechos">
+
+            <p class="copyright">
+                &copy; 2023 comisión 23511 Codo a Codo <br>Hotel de Alta Montaña Mendoza.
+
+            </p>
+
+            <div class="socialMedia">
+
+                <a href="https://www.facebook.com/"><span class="fab fa-facebook"></span></a>
+                <a href="https://twitter.com/?lang=es"><span class="fab fa-twitter"></span></a>
+                <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</div>
+</div>
+
+    <script>
+        //const URL = "http://127.0.0.1:5000/"
+        const URL = "https://barbclavijo.pythonanywhere.com/"
+        // solicitud  al servidor para obtener las reservas
+        fetch(URL + 'reservas')
+            .then(function (response) {
+                if (response.ok) {return response.json(); }
+            })
+            .then(function (data) {
+                let tablaReservas = document.getElementById('tablaReservas');
+
+                for (let reserva of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = '<td>' + reserva.id_reserva + '</td>' +
+                        '<td>' + reserva.nombre + '</td>' +
+                        '<td>' + reserva.apellido + '</td>' +
+                        '<td>' + reserva.mail + '</td>' +
+                        '<td>' + reserva.fecha_ing + '</td>' +
+                        '<td>' + reserva.fecha_egr + '</td>' +
+                        '<td>' + reserva.habitacion + '</td>' +
+                        '<td>' + reserva.cantidad + '</td>';
+                    tablaReservas.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+
+                alert('Error al obtener las reservas.');
+            });
+    </script>
+
+    <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+        </script>
+    <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+        </script>
+    <script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+</body>
+
+</html>

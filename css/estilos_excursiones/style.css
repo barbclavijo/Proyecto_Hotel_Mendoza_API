@@ -1,0 +1,677 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0px;
+    padding: 0px;
+    background-color: #DBC493;
+
+}
+
+
+
+.header {
+    display: flex;
+    padding: 30px;
+    background-color: #242323;
+    height: 40px;
+}
+
+.contenedorLogo img {
+
+    width: 100px;
+    margin: 0px 15px;
+}
+
+.encabezado-centro h2 {
+    display: flex;
+    font-size: 20px;
+    height: 70px;
+    border: 1px solid #B69E83;
+    margin: 0;
+    justify-content: center;
+    align-items: end;
+    background-color: #B69E83;
+    font-family: 'EB Garamond', serif;  
+    color: #33383b;
+    padding-bottom: 10px;
+}
+
+/* menu estilos  */
+
+
+.menu {
+  background-color: #242323;
+    display: flex;
+    height: 60px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    padding: auto;
+    font-family: 'EB Garamond', serif;
+
+}
+
+nav ul li:hover {
+    background-color: grey;
+
+}
+
+nav ul li a {
+    color: #DED1BF;
+    padding: 20px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #242323;
+    background-color: #DBC493;
+    transform: scale(0,1.0,1);
+
+
+
+}
+
+nav {
+    display: flex;
+    
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+}
+
+.barra {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista {
+justify-content: flex-end;
+width: 100%;
+
+}
+
+/* principal */
+
+.info_serv p {
+    text-align: center;
+    margin: 30px;
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    font-family: 'EB Garamond', serif;
+}
+
+.info_serv .api {
+    margin: 15px;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+}
+
+.servicios h2 {
+    display: flex;
+    font-size: 20px;
+    height: 70px;
+    border: 1px solid #B69E83;
+    margin: 0;
+    justify-content: center;
+    align-items: end;
+    background-color: #B69E83;
+    font-family: 'EB Garamond', serif;  
+    color: #33383b;
+    padding-bottom: 10px;
+}
+
+
+
+.texto h3 {
+    font-family: 'EB Garamond', serif;
+   text-align: center;
+}
+
+.servicios {
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   padding-bottom: 50px;
+}
+
+
+.servicios img {
+    height: 250px;
+    width: 430px;
+    padding: 20px;
+    overflow: hidden;
+    
+}
+ a:link {
+    color: #242323
+}
+
+
+   
+
+body {
+    background-color:#DBC493 ;
+
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin:0px;
+}
+
+ul li {
+    display: inline-block;
+    ;
+  
+}
+
+li a {
+    color:antiquewhite;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transform: scale(1.1);
+   
+}
+
+#navGestion {
+  background-color: #242323;
+  margin-bottom: 20px;
+
+}
+
+#navLink{
+  color: white;
+}
+
+#navbarDropdown {
+  color: white;
+
+}
+
+#obtReserva{
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.formMargin {
+  margin: 5px;
+
+}
+
+#modBot{
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  
+
+}
+
+#formStyle {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 3px;
+
+}
+
+#buscar {
+
+  color: white;
+}
+
+table thead tr th {
+  
+  text-align: center;
+
+}
+
+.tabla{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.contenedorGestion {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footerGestion {
+  position: absolute;
+  width: 100%;
+  bottom: 0;  
+
+}
+
+#formularioAlta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+
+}
+
+#formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+  border: 2px solid #33383b;
+  border-radius: 5px;
+  background-color: #DED1BF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#alignForm{
+
+  width: 75%;
+  display: flex;
+  align-items: center; 
+  flex-direction: row;
+  justify-content: space-between;
+  
+  margin-bottom: 3px;
+  
+
+}
+
+#id_reserva {
+  margin-right: 10px;
+}
+
+#alignFormHab{
+  width: 75%;
+  display: flex;
+  align-items: center; 
+  flex-direction: row;
+  
+}
+
+#mail {
+  margin-left: 19px;
+}
+
+#fecha_ing {
+  margin-right: 63px;
+}
+
+#hab {
+margin-right: 58px;
+}
+
+/* estilos footer  */
+
+
+
+.contenedorLogoFooter img {
+    width: 100px;
+
+}
+
+.footerGeneral {
+    display: flex;
+    background: #242323;
+    height: 180px;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footerMenu {
+    margin: 10px 0 12px;
+    padding: 0;
+}
+
+.footerMenu a {
+    text-decoration: none;
+    color: #DED1BF;
+    font-family: 'EB Garamond', serif;
+}
+
+.footerMenu a:before {
+    content: "|";
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.informacion i {
+    display: flex;
+    color: white;
+    font-size: 25px;
+
+}
+
+.informacion p {
+    display: flex;
+    color: #DED1BF;
+    padding: 10px 10px 10px;
+
+
+
+}
+
+.direccion {
+
+    display: flex;
+    align-items: center;
+
+
+
+
+}
+
+.telefono {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+}
+
+
+
+.email {
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+
+}
+
+
+.informacion p a {
+    color: #DBC493;
+    text-decoration: none;
+
+}
+
+
+.derechos {
+    width: 20%;
+}
+
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    margin: 0;
+    padding: 5px;
+}
+
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.socialMedia a {
+    width: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+    .contenedorGeneral {
+      
+      display: grid;
+      grid-template: auto auto auto auto auto auto/ 100%;
+      grid-template-areas: "header"
+        "quienes"
+        "izquierda"
+        "centro"
+        "derecha"
+        "footer"
+  
+    }
+  
+    nav ul li a:hover{
+    color: #242323;
+    background-color: none;
+    transform: scale(0.0);
+      
+    }
+  
+  .abrir-menu{
+    position: absolute;
+    right: 0;
+  }
+  
+  
+  
+    .abrir-menu, .cerrar-menu{
+      display: block;
+    }
+   
+   
+    .barra{  
+      padding: 0px;
+      margin: 0px;
+      right: 0;    
+    }
+  
+    .menu{
+      flex-direction: column;
+      align-items: flex-end;
+      visibility: hidden;
+      opacity: 0;
+      padding: 2rem;
+      margin: 0;
+      bottom: 0;
+      box-shadow: 0 0 0 100vmax  rgba(0, 0, 0, .5);
+      
+  
+    }
+  
+    .menu.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .lista {
+      flex-direction: column;
+      margin: 0px;
+      align-items: flex-end;
+      padding: 0px;
+      width: 100%;
+      
+    }
+  
+    .mendoza {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      
+    
+    }
+    .nosotros{
+      display: flex;
+      flex-direction: column;
+      
+  
+    }
+    
+    .quienesSomos img {
+      width: auto;
+      overflow: hidden;
+    }
+    
+    .quienesSomos {
+      display: flex;
+      
+    }
+    
+    
+    .centrado {
+      display: flex;
+      flex-direction: column;
+    }
+  
+  .footerGeneral {
+    display: flex;
+    background: #242323;
+    padding: 30px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .contenedorLogoFooter {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footerGeneral {
+    display: flex;
+    background: #242323;
+    max-width: 100%;
+  
+  }
+  
+
+  
+  .footerMenu a {
+    text-decoration: none;
+    color: #DED1BF;
+  }
+  
+  .footerMenu a:before {
+    content: "|";
+    font-size: 20px;
+    padding-right: 5px;
+  }
+  
+  .informacion {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .informacion i {
+    display: flex;
+    color: white;
+    font-size: 25px;
+    
+  
+  }
+  
+  .informacion p {
+    display: flex;
+    color: #DED1BF;
+    padding: 3px 3px 3px;
+  
+  
+  
+  }
+  
+  .direccion {
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  .telefono {
+  
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  
+  }
+  
+  .email {
+  
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  
+  }
+  
+  .informacion p a {
+    color: #DBC493;
+    text-decoration: none;
+  
+  }
+  
+  .derechos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  
+  .copyright {
+    display: flex;
+    justify-content: center;
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    margin: 0;
+    
+  }
+  
+  
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+}
+
+}

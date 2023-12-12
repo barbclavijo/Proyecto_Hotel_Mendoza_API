@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Mendoza hotel de Montaña</title>
+    <link rel="stylesheet" href="css/estilosservicios.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8efb435a74.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="principal">
+        <header class="header">
+
+            <div class="contenedorLogo">
+                <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="barra">
+                <nav class="menu" id="nav">
+                    <ul class="lista">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="habitaciones.html" class="noHover">Habitaciones</a></li>
+                        <li><a href="servicios.html" class="noHover">Servicios</a></li>
+                        <li><a href="formulario.html" class="noHover">Contacto</a></li>
+                        <li><a href="gestion.html" class="noHover">Gestionar Reserva</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+
+        <main class="encabezado-centro">
+            <div class="info_serv">
+                <h1> Nuestros Servicios</h1>
+                <div class="api" align="right">
+                    <script>
+                        let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+                        let f = new Date();
+                        document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+                    </script>
+                </div>
+                <p><i>La atención personalizada y los detalles de primera calidad harán que vivas una experiencia
+                        inigualable. <br>
+                        A tu disposición se encontrarán todos estos servicios para que sientas la comodidad de estar en
+                        casa, manteniendo el equilibrio perfecto entre un viaje de negocios y un buen descanso.
+                        <br>Relájate, nuestro staff te ayudará en todo momento para que alojarte en nuestro hotel
+                        siempre sea el mejor plan.</i></p>
+            </div>
+
+            <div class="servicios">
+                <ul>
+                    <li class="u">
+                        <div class="servimg">
+                            <img src="imagenes/desayuno.jpg" alt="Desayuno">
+                        </div>
+                        <div class="texto"> <!-- texto -->
+                            <h3>Desayuno</h3>
+                            <p>Desayuno Buffet.</p>
+                        </div>
+                    </li>
+                    <li class="u">
+                        <div class="servimg">
+                            <img src="imagenes/restaurante.png" alt="Restaurant">
+                        </div>
+                        <div class="texto">
+                            <!-- texto -->
+                            <h3>Restaurante</h3>
+                            <p>Podrás disfrutar cocina regional típica argentina.</p>
+                        </div>
+                    </li>
+                    <li class="d">
+                        <div class="servimg">
+                            <img src="imagenes/wifi.jpg" alt="Wifi">
+                        </div>
+                        <div class="texto">
+                            <!-- texto -->
+                            <h3>Wi-fi</h3>
+                            <p>Wi-Fi en habitaciones y áreas comunes interiores del hotel.</p>
+                        </div>
+                    </li>
+
+                    <li class="d">
+                        <div class="servimg">
+                            <img src="imagenes/piscina.jpg" alt="Piscina">
+                        </div>
+                        <div class="texto">
+                            <!-- texto -->
+                            <h3>Piscina</h3>
+                            <p>Piscina ideal para relajarse durante su estadía.</p>
+                        </div>
+                    </li>
+                    <li class="t">
+                        <div class="servimg">
+                            <img src="imagenes/gimnasio.jpg" alt="Gimnasio">
+                        </div>
+                        <div class="texto">
+                            <!-- texto -->
+                            <h3>Gimnasio</h3>
+                            <p>Pequeña sala de gym con hermosa vista a la ciudad.</p>
+                        </div>
+                    </li>
+                    <li class="t">
+                        <div class="servimg">
+                            <a href="excursiones.html"><img
+                                    src="imagenes/par-senderismo-nanos-plateau-eslovenia-contra-cielo-azul_181624-28088.jpg"
+                                    alt="excursiones"></a>
+                        </div>
+
+                        <div class="texto">
+                            <!-- texto -->
+                            <h3>Excursiones </h3>
+                            <p>Tenemos los mejores guias de turismo para una gran experiencia.</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </main>
+
+
+        <footer class="footerGeneral">
+
+            <div class="footerLogoLink">
+
+                <div class="contenedorLogoFooter">
+                    <a href="index.html"><img src="imagenes/logo.png" alt="logo"> </a>
+                </div>
+
+                <p class="footerMenu">
+                    <a href="index.html">Home</a>
+
+                    <a href="habitaciones.html">Habitaciones</a>
+
+                    <a href="servicios.html">Servicios</a>
+
+                    <a href="formulario.html">Contacto</a>
+
+                </p>
+
+
+            </div>
+
+            <div class="informacion">
+
+                <div class="direccion">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Av. Champagnat 32<br> Mendoza.</p>
+                </div>
+
+                <div class="telefono">
+                    <i class="fa fa-phone"></i>
+                    <p style="justify-self: left;">0261-541-8139</p>
+                </div>
+
+                <div class="email">
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:info@hotelam.com">info@hotelam.com</a></p>
+                </div>
+
+            </div>
+
+            <div class="derechos">
+
+                <p class="copyright">
+                    &copy; 2023 comisión 23511 Codo a Codo <br>Hotel de Alta Montaña Mendoza.
+
+                </p>
+
+                <div class="socialMedia">
+
+                    <a href="https://www.facebook.com/"><span class="fab fa-facebook"></span></a>
+                    <a href="https://twitter.com/?lang=es"><span class="fab fa-twitter"></span></a>
+                    <a href="https://www.instagram.com/"><span class="fab fa-instagram"></span></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>
